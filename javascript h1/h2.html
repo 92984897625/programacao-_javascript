@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="busca()"> posição </button>
+    <button onclick="tamanho()"> tamanho </button>
+    <button onclick="ad_Final()"> adicionar no final </button>
+    <button onclick="ad_Comeco()"> adicionar no comeco </button>
+    <button onclick="varrer()"> varrer </button>
+    <button onclick="varrer2()"> varrer2 </button>
+    <div id="elemento"></div>
+    <script>
+        const nomes = ["ivo1","ivo2","ivo3","ivo4","ivo5"]
+        var nome, posi, nomeNovo
+        console.log(nomes)
+        
+        function busca() {
+            posi = prompt("escolha a posição")
+            alert(nomes[posi])
+        }
+        function tamanho() {
+            alert(nomes.length)
+        }
+        function ad_Final() {
+            nomeNovo = prompt("nome novo")
+            nomes.push(nomeNovo)
+            console.log(nomes)
+        }
+        function ad_Comeco() {
+            nomeNovo = prompt("nome novo")
+            nomes.unshift(nomeNovo)
+            console.log(nomes)
+        }
+        function varrer() {
+            for (nomeNovo of nomes) {
+                if(nomeNovo.charAt(0) == "i")
+                console.log(nomeNovo)
+            }
+        }
+        // function varrer() {
+        //     for (nomeNovo of nomes) {
+        //         if(nomeNovo.charAt(0) == "5")
+        //         alert(nomeNovo)
+        //     }
+        // }
+
+// ffffffffffffffffffffffffffmjj
+
+        // function varrer2() {
+        //     Elementohtml = document.getElementById("elemento")
+            
+        //     for (nomeNovo of nomes) {
+        //         if(nomeNovo.charAt(0) == "i")
+        //         console.log(nomeNovo)
+        //     }
+        // }
+    </script>
+</body>
+</html>
