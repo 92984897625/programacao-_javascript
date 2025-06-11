@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const nomes = ["ivo1","ivo2","ivo3","ivo4","ivo5"]
+        var nome, posi, nomeNovo
+        console.log(nomes)
+        
+        function busca() {
+            posi = prompt("escolha a posição")
+            alert(nomes[posi])
+        }
+            // remover o final = .pop
+            // remover o inicio = .shift
+        function removerFin() {
+            if ( nomes.length != 0 ) {
+                nomes.pop()
+                console.log(nomes)
+            } else {
+                alert("não existe mais elementos")
+            }
+        }
+        function removerIni() {
+            if ( nomes.length != 0 ) {
+                nomes.shift()
+                console.log(nomes)
+            } else {
+                alert("não existe mais elementos")
+            }
+        }
+        function tamanho() {
+            alert(nomes.length)
+        }
+        function ad_Final() {
+            nomeNovo = prompt("nome novo")
+            nomes.push(nomeNovo)
+            console.log(nomes)
+        }
+        function ad_Comeco() {
+            nomeNovo = prompt("nome novo")
+            nomes.unshift(nomeNovo)
+            console.log(nomes)
+        }
+        function varrer() {
+            for (nomeNovo of nomes) {
+                if(nomeNovo.charAt(0) == "i")
+                console.log(nomeNovo)
+            }
+        }
+        // function varrer() {
+        //     for (nomeNovo of nomes) {
+        //         if(nomeNovo.charAt(0) == "5")
+        //         alert(nomeNovo)
+        //     }
+        // }
+
+// ffffffffffffffffffffffffffmjj
+
+        // function listarPq(meu_array) {
+        //     elemDiv = document.getElementById("lista")
+        //     conteudoHTML = ""
+        //     for (const cite of meu_array) {
+        //         conteudoHTML += `<p> ${cite}`
+        //         if(nomeNovo.charAt(0) == "i")
+        //         console.log(nomeNovo)
+        //     }
+        // }
+        // function fatiar() {
+        //     pos1 = prompt("digite a posição do corte")
+
+        // }
+        var num, i
+        // nomes.forEach(function(mun,i) {
+        //     console.log(`numero ${mun} elemento ${i}`)
+        // })
+        nomes.forEach(num => {
+            console.log(`numero ${mun}`)
+        })
+        // for (const nums of nomes) {
+        //     console.log(nums * 2)
+        // }
+    </script>
+
+    <button onclick="busca()"> posição </button>
+    <button onclick="tamanho()"> tamanho </button>
+    <button onclick="removerFin()"> remover inicio </button>
+    <button onclick="removerIni()"> remover final </button>
+    <button onclick="ad_Final()"> adicionar no final </button>
+    <button onclick="ad_Comeco()"> adicionar no comeco </button>
+    <button onclick="varrer()"> varrer </button>
+    <!-- <button onclick="listarPq(meu_array)"> varrer2 </button> -->
+    <div id="elemento"></div>
+
+    
+</body>
+</html>
