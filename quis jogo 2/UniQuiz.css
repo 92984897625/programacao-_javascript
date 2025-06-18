@@ -1,0 +1,176 @@
+/* UniQuiz.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita scroll desnecessário */
+}
+
+/* Container principal para gerenciar o background */
+#appContainer {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.8s ease-in-out; /* Transição suave para o fundo */
+    display: flex; /* Para centralizar o conteúdo */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Classes para os diferentes fundos de tema */
+.body-bg-inicial {
+    background-image: url("https://noticias.ambientebrasil.com.br/wp-content/uploads/2021/10/pexels-miriam-espacio-110854-scaled.jpg"); /* Fundo padrão ou inicial */
+}
+
+.body-bg-geografia {
+    background-image: url("https://png.pngtree.com/background/20230331/original/pngtree-travel-geography-navigation-concept-background-old-vintage-retro-compass-picture-image_2219979.jpg"); /* Exemplo para Geografia */
+}
+
+.body-bg-biologia {
+    background-image: url("https://img.odcdn.com.br/wp-content/uploads/2024/09/shutterstock_1669326868-1920x1080.jpg"); /* Exemplo para Biologia */
+}
+
+.body-bg-sistemasolar {
+    background-image: url("https://static.todamateria.com.br/upload/si/st/sistema-solar-og.jpg?class=ogImageWide"); /* Exemplo para Sistema Solar */
+}
+
+
+/* Estilos para as telas de contêiner */
+.tela-container {
+    width: 80%; /* Define uma largura inicial para o retângulo */
+    max-width: 500px; /* Limita a largura máxima do retângulo */
+    height: auto; /* Altura do retângulo será adaptativa */
+    min-height: 500px; /* Altura mínima para a caixa do quiz */
+    background-color: #ffffff; /* Cor de fundo do retângulo */
+    border-radius: 10px; /* Borda do retângulo */
+    color: white;
+    display: flex; /* Usado para centralizar o texto dentro do retângulo */
+    flex-direction: column; /* Conteúdo empilhado verticalmente */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 25px; /* Padding interno */
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.4);
+    position: absolute; /* Para sobrepor no centro */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Começa invisível */
+    pointer-events: none; /* Desativa interações quando invisível */
+    transition: opacity 0.5s ease-in-out; /* Transição para aparecer/desaparecer */
+}
+
+.tela-container.active {
+    opacity: 1; /* Torna visível */
+    pointer-events: auto; /* Reativa interações */
+}
+
+/* Estilos para o título do quiz */
+.tela-container h1 {
+    color: #000000;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+/* Estilos para os botões principais (Jogar, Iniciar Nível, Próximo Nível, Recomeçar) */
+.main-btn {
+    background-color: #4e007ad3;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    min-width: 200px;
+}
+
+.main-btn:hover {
+    background-color: #54107c96;
+    transform: translateY(-2px);
+}
+
+/* Estilos para a pergunta (dentro da caixaUniQuiz) */
+.questaoUniQuiz {
+    color: rgb(0, 0, 0);
+    font-size: 1.3em;
+    margin-bottom: 20px; /* Espaço entre a pergunta e a imagem/opções */
+    padding: 0 10px;
+    flex-grow: 1; /* Permite que ocupe espaço disponível */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para a imagem (dentro da caixaUniQuiz) */
+.caixaUniQuizimg {
+    width: 80%; /* Ajusta o tamanho da imagem */
+    max-width: 300px; /* Limite máximo */
+    height: auto; /* Mantém proporção */
+    margin-bottom: 20px; /* Espaço abaixo da imagem */
+    display: block; /* Para margin auto funcionar */
+    object-fit: contain;
+}
+
+/* Estilos para as opções de resposta */
+.opcoesRespostas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Espaço entre os botões */
+    width: 90%; /* Largura do grid */
+    max-width: 350px; /* Limite de largura */
+    margin-top: 20px;
+}
+
+/* Estilos para os botões de resposta */
+.answer-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    width: 100%; /* Preenche a largura do grid */
+}
+
+.answer-btn:hover {
+    background-color: #0056b3;
+}
+.answer-btn.correct {
+    background-color: #28a745;
+}
+.answer-btn.incorrect {
+    background-color: #dc3545;
+}
+.answer-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Estilos para o botão "Próxima Questão" */
+.botaoProximo {
+    background-color: #10a55b;
+    color: rgb(245, 255, 243);
+    border: none;
+    margin-top: 25px; /* Espaço acima */
+    font-size: 1.1em;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+.botaoProximo:hover {
+    background-color: #0e8a4a;
+}
