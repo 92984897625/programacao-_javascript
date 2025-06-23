@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ma, so, t
+        var n1 = Number(prompt("informe um numero pra dividir"))
+        
+        var n2 = Number(prompt("informe outro numero pra dividir"))
+        t += n2 + " = "
+        if ( n1 > n2 ) {
+            ma = 1
+            
+        } else {
+            ma = 2
+        }
+        t =  (ma == 1?n1:n2) + " ÷ " +  (ma == 2?n1:n2) + " = "
+        so = (ma == 1?n1:n2) / (ma == 2?n1:n2)
+
+        alert ( t + so )
+    </script>
+</body>
+</html>

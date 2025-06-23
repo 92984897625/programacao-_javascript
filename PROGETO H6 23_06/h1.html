@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ho1,ho2,mu1,mu2,t = "informe a idade ", ih , im, so1, so2
+        ho1 = Number(prompt(`${t} do 1º homem`))
+        ho2 = Number(prompt(`${t} do 2º homem`))
+        while ( ho1 == ho2 ) {
+            ho2 = Number(prompt(`${t} do 2º homem, de novo`))
+        }
+        mu1 = Number(prompt(`${t} da 1ª mulher`))
+        mu2 = Number(prompt(`${t} da 2ª mulher`))
+        while ( mu1 == mu2 ) {
+            mu2 = Number(prompt(`${t} da 2ª mulher, de novo`))
+        }
+        if ( ho1 > ho2 ) {
+            ih = 1
+        } else {
+            ih = 2
+        }
+        if ( mu1 > mu2 ) {
+            im = 1
+        } else {
+            im = 2
+        }
+        so1 = (ih == 1?ho1:ho2) + (im == 2?mu1:mu2)
+        so2 = (ih == 2?ho1:ho2) + (im == 1?mu1:mu2)
+        t = "soma do mais velho e mais novo é "
+        alert (`A primeira ${t,so1} e a segunda ${t,so2}`)
+    </script>
+</body>
+</html>

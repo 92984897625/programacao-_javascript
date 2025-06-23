@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert ("de as informações pra entra no parque aquático")
+        var idade = ((Number(prompt("informe a idade"))) > 12? true:false)
+        var altura = ((Number(prompt("informe a altura"))) >= 1.50? true:false)
+        var peso = (Number(prompt("informe o seu peso")))
+        var t1 = idade?"":"a idade permitida"
+        var t2 = altura?"":"a altura permitida"
+        peso = peso >= 50 && peso <= 120? true:false
+        var t3 = peso?"":"o peso permitido"
+        if (idade && altura && peso) {
+            alert("Pode entra")
+        } else {
+            alert(`Não pode entra por que você não tem${t1} ${t2==""?"":" e "}${t2}${t3 == ""?"":" e "}${t3}` )
+        }
+    </script>
+</body>
+</html>

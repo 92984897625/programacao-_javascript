@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #aula2306{
+            background: gray;
+            text-align: center;
+            padding: 100px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="aula2306" onclick="clicar()" onmouseenter="entar()" onmouseout="sair()">
+        Botão
+    </div>
+    <script>
+        function clicar() {
+            aula2306.style.background = 'red'
+            aula2306.innerText = 'Clicou :\)'
+            aula2306.style.color = 'white'
+        }
+        function entar() {
+            aula2306.style.background ='pink'
+            aula2306.innerText = 'Clicar'
+            aula2306.style.color = 'black'
+        }
+        
+        function sair() {
+            aula2306.style.background = 'gray'
+            aula2306.innerText = 'Botão'
+            aula2306.style.color = 'black'
+        }
+    </script>
+</body>
+</html>

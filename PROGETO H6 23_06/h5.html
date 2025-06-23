@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var co = prompt("seu tipo de conbustivel é Álcool = \"a\" ou Gasolina \"g\"")
+        var li = Number(prompt("informe a quantidade de litros"))
+        var ca = (li * ( co == "a" || co == "g"? (co == "a"?4.29:5.15):0))
+        ca -= ca * (co == "a" || co == "g"?
+        (co == "a"?(li <= 20?0.03:0.05):(li <= 20?0.04:0.06))
+        :0)
+        p = co == "a" || co == "g"?
+        (co == "a"?(li <= 20?0.03:0.05):(li <= 20?0.04:0.06))
+        :0
+        ca = ca.toFixed(2)
+        alert (`o preso do seu conbustivel é de $${ca} com desconto de ${100*p}%`)
+        // Math.round()
+    </script>
+</body>
+</html>

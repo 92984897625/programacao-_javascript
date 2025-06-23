@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            
+        }
+        section{
+            background: gray;
+            border-radius: 12px;
+            padding: 50px;
+            width: 50%;
+            margin: auto;
+        }
+        #botão {
+            background-color: rgb(77, 77, 77);
+            color: aliceblue;
+            width: 50%;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .entrada{
+            margin: 5px;
+            border-radius: 8px;
+            border: 0px;
+            width: 75%;
+            height: 20px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cálculo Soma</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>
+                Valor 1: <br>
+                <input type="number" class="entrada" id="entrada1">
+            </p>
+            <p>
+                Valor 2: <br>
+                <input type="number" class="entrada" id="entrada2">
+            </p>
+            <p>
+                <input type="button" value="Calcular" id="botão" onclick="calcular()">
+            </p>
+        </div>
+        <div id="result">
+
+        </div>
+    </section>
+        <script>
+            function calcular() {
+                var valor1 = document.getElementById('entrada1')
+                var valor2 = document.getElementById('entrada2')
+                var resultado = document.getElementById('result')
+
+                var v1 = Number(valor1.value)
+                var v2 = Number(valor2.value)
+                var r = v1 + v2
+                resultado.innerHTML = `A soma é ${v1} + ${v2} = ${r}`
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var horaAl = Number(prompt("quantas horas de aula o profesor tem?"))
+        var nivelPr = Number(prompt("qual é o  nivel o profesor tem? \"so pode ser do nivel 1 ao 3\""))
+        var pa = horaAl * (nivelPr == 1?12:nivelPr == 2?17:25)
+        alert (`o pagamento do profesor nivel ${nivelPr == 1?1:nivelPr == 2?2:3} e de $${pa},00`)
+    </script>
+</body>
+</html>
