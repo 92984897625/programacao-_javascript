@@ -1,13 +1,18 @@
 const diviniciar = document.getElementById("diviniciar")
 const divareajogo = document.getElementById("areajogo")
 const titulodapergunta = document.getElementById("titulopergunta")
-const btnIniciar = document.getElementById("botaoiniciar")
-const pxmProximo = document.getElementById("botaoProximo")
+const btniniciar = document.getElementById("botaoiniciar")
+const pxmpergunta = document.getElementById("botaoProximo")
+const btnproximapergunta = document.querySelector(".botaoProximo")
+const divplacar = document.getElementById("placar")
+const qtdacertos = document.getElementById("quantidadeacertos")
+const btnreiniciar = document.getElementById("reiniciar")
 
-// "mouseover"  "click"
-btnIniciar.addEventListener("mouseover", iniciarjogo)
-pxmProximo.addEventListener("click", proximapergunta)
-// pxmProximo.disabled = true
+
+
+btniniciar.addEventListener("click", iniciarjogo)
+pxmpergunta.addEventListener("click", proximapergunta)
+
 
 const perguntas = [
     {pergunta:"Qual é o maior deserto do mundo?", opcoes:["saara","antartida","atacama","chile"], correta:"antartida"},
@@ -19,6 +24,8 @@ const perguntas = [
 ]
 let indiceperguntas = 0
 let botaodepergunta = document.createElement("button")
+let contadorderespostacorreta = 0
+
 
 
 /* Funções */
@@ -33,7 +40,7 @@ function fecharbotaoinicio(){
 
 function abrirareajogo(){
     divareajogo.classList.add("active")
-    pxmProximo.disabled = true
+    btnproximapergunta.disabled = true
 
     titulodapergunta.textContent = perguntas[indiceperguntas].pergunta
     areaperguntas.innerHTML = ""
@@ -54,18 +61,20 @@ function validarrespostacorreta(btnSelecionado){
     botoesdaTela.forEach(botao => {
         if(botao.textContent === respostacorreta){
             botao.classList.add("correct")
+        
         }
         if(botao.textContent === btnSelecionado && botao.textContent != respostacorreta){
             botao.classList.add("incorrect")
+            
         }
         botao.classList.add("disable")
         botao.disabled = true
+
     })
-    if (btnSelecionado === respostacorreta) {
-        contadorrespostascorretas++
-        console.log(contadorrespostascorretas)
+    if(btnSelecionado === respostacorreta){
+        contadorderespostacorreta++
     }
-    pxmProximo.disabled = false
+    btnproximapergunta.disabled = false
 }
 
 
@@ -74,10 +83,14 @@ function proximapergunta(){
     if (indiceperguntas < perguntas.length)
         abrirareajogo()
     else{
-        encerrarJogo()
+        encerrarjogo()
     }
 }
-
-function encerrarJogo() {
-    alert(contadorrespostascorretas)
+function encerrarjogo(){
+    var p = ((contadorderespostacorreta * 100) / perguntas.length).toFixed(0)
+    var t = p <= 30?"presisa melhorar":p <= 70?"regular":p <= 99?"muito bom":"excelente"
+    divareajogo.classList.remove("active")
+    divplacar.classList.add("active")
+    qtdacertos.textContent = ("fim de jogo,voce acertou " +contadorderespostacorreta+ " de " +perguntas.length+"\n /"+p+"%"+" "+t)
+    btnreiniciar.addEventListener("click", () => location.reload())
 }
