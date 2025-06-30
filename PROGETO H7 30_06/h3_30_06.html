@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mul = Number(prompt("coloque o multiplo dos numeros"))
+        var ndc = Number(prompt("coloque aonde vai comesar os numeros que serão somados"))
+        var ndv = Number(prompt("coloque os ate aonde os numeros serão somados"))
+        mul != Number? mul = 2: mul = mul        
+        ndv != Number? ndv = 10: ndv = ndv        
+        ndc != Number? ndc = 1: ndc = ndc        
+        var soma = 0, t = ""
+        for( let n = ndc; n <= ndv; n++ ) {
+            if (n % mul == 0){
+                soma += n
+                if (n != (ndv % mul == 0? ndv : ndv - (ndv % mul))) {
+                    t += `${n} + ` 
+                } else {
+                    t += `${n} = ${soma}`
+                }
+            }
+        }
+        alert (t)
+        alert(" a soma dos multiplos de "+ mul + " comesando do "+ ndc +" ate "+ ndv +" é " + soma)
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ndv = Number(prompt("coloque os numeros que serão somados"))
+        ndv == ""? ndv = 1: ndv = ndv        
+        var soma = 0, t = ""
+        var soma2 = 0, t2 = ""
+        for( let n = 1; n <= ndv; n++ ) {
+            if ( n % 2 == 0 ){
+                soma += n
+                if (n != (ndv % 2 == 0? ndv : ndv - 1)) {
+                    t += `${n} + ` 
+                } else {
+                    t += `${n} = ${soma}`
+                }
+            } else {
+                soma2 += n
+                if (n != (ndv % 2 == 0? ndv - 1 : ndv )) {
+                    t2 += `${n} + ` 
+                } else {
+                    t2 += `${n} = ${soma2}`
+                }
+            }
+        }
+        alert (t)
+        alert (t2)
+        alert(" o resultado do par é " + soma)
+        alert(" o resultado do impar é " + soma2)
+        alert("a soma do inpar e o par é " + (soma + soma2))
+    </script>
+</body>
+</html>

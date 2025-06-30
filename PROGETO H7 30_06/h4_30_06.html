@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ta = Number(prompt("escolha uma tabuada"))
+        var mul = 0, t = ""
+        for( let n = 1; n <= 10; n++ ) {
+            mul = n * ta
+            t += `${n} x ${ta} = ${mul} \n`
+        }
+        alert (t)
+    </script>
+</body>
+</html>
