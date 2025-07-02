@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(36, 36, 36);
+        }
+        button {
+            background-color: rgb(77, 77, 77);
+            color: aliceblue;
+            border-radius: 10px; 
+            padding: 25px;
+            width: 10%;
+        }
+        #c {
+            background-color: rgb(255, 166, 0);
+            width: 31%;
+        }
+        #igual {
+            background-color: rgb(32, 199, 46);
+        }
+        #zero {
+            width: 21%;
+        }
+        input {
+            padding: 25px;
+            border-radius: 5px; 
+            width: 35%;
+            
+        }
+        #menos {
+            font-size: larger;
+            padding: 22px;
+        }
+        #divsao {
+            font-size: larger;
+            padding: 22px;
+        }
+        #ponto {
+            font-size: larger;
+            padding: 21px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculadora">
+        <div>
+            <input type="text" id="tela">
+        </div>
+        <br>
+        <button id="c" onclick="c()">C</button>
+        <!-- <button id="del" onclick="del()">DEL</button> -->
+        <!-- <button id="porsemtagen" onclick="porsemtagen()">%</button> -->
+        <button id="divsao" onclick="divsao()">÷</button>
+        <br>
+        <button id="sete" onclick="sete()">7</button>
+        <button id="oito" onclick="oito()">8</button>
+        <button id="nove" onclick="nove()">9</button>
+        <button id="menos" onclick="menos()">-</button>
+        <br>
+        <button id="quatro" onclick="quatro()">4</button>
+        <button id="sinco" onclick="sinco()">5</button>
+        <button id="seis" onclick="seis()">6</button>
+        <button id="vezes" onclick="vezes()">x</button>
+        <br>
+        <button id="um" onclick="um()">1</button>
+        <button id="dois" onclick="dois()">2</button>
+        <button id="tres" onclick="tres()">3</button>
+        <button id="mais" onclick="mais()">+</button>
+        <br>
+        <button id="zero" onclick="zero()">0</button>
+        <button id="ponto" onclick="ponto()">.</button>
+        <button id="igual" onclick="igual()">=</button>
+    </div>
+     <script>
+        var n1 = ""
+        var n2 = ""
+        var lc2 = false
+        var r = ""
+        var op = ""
+        escrever()
+
+        
+        // numeros
+        
+        function um() {
+            escrever()
+            tela.value += "1";
+            lc2?n1 += "1":n2 += "1"
+        }
+        function dois() {
+            escrever()
+            tela.value += "2";
+            lc2?n1 += "2":n2 += "2"
+        }
+        function tres() {
+            escrever()
+            tela.value += "3";
+            lc2?n1 += "3":n2 += "3"
+        }
+        function quatro() {
+            escrever()
+            tela.value += "4";
+            lc2?n1 += "4":n2 += "4"
+        }
+        function sinco() {
+            escrever()
+            tela.value += "5";
+            lc2?n1 += "5":n2 += "5"
+        }
+        function seis() {
+            escrever()
+            tela.value += "6";
+            lc2?n1 += "6":n2 += "6"
+        }
+        function sete() {
+            escrever()
+            tela.value += "7";
+            lc2?n1 += "7":n2 += "7"
+        }
+        function oito() {
+            escrever()
+            tela.value += "8";
+            lc2?n1 += "8":n2 += "8"
+        }
+        function nove() {
+            escrever()
+            tela.value += "9";
+            lc2?n1 += "9":n2 += "9"
+        }
+        function zero() {
+            escrever()
+            tela.value += "0";
+            lc2?n1 += "0":n2 += "0"
+        }
+        
+        // operações
+
+        function mais() {
+            escrever()
+            tela.value += " + ";
+            op = "+"
+            lc2 = true
+        }
+        function menos() {
+            escrever()
+            tela.value += " - ";
+            op = "-"
+            lc2 = true
+        }
+        function vezes() {
+            escrever()
+            tela.value += " x ";
+            op = "x"
+            lc2 = true
+        }
+        function divsao() {
+            escrever()
+            tela.value += " ÷ ";
+            op = "÷"
+            lc2 = true
+        }
+        
+        // espesial
+
+// function porsemtagen() {
+//     if ((n1 !== "" && !lc2) || (n2 !== "" && lc2)) {
+//         if (lc2) {
+//             n1 = String(Number(n1) / 100);
+//         } else {
+//             n2 = String(Number(n2) / 100);
+//         }
+//         escrever();
+//         if (lc2) {
+//             tela.value = `${n1} ${op} ${n2}`;
+//         } else {
+//             tela.value = n2;
+//         }
+//     }
+// }
+        
+        function ponto() {
+            escrever()
+            tela.value += ".";
+            lc2?n1 += ".":n2 += "."
+        }
+
+        function c() {
+            escrever()
+            tela.value = "";
+            n1 = ""
+            n2 = ""
+            lc2 = false
+            r = ""
+            op = ""
+        }
+        
+        function igual() {
+            escrever()
+            r = ""
+            r = op == "+"?
+            Number(n1) + Number(n2):
+            op == "-"?
+            Number(n1) - Number(n2):
+            op == "x"?
+            Number(n1) * Number(n2):
+            Number(n1) / Number(n2)
+            tela.value = r;
+        }
+
+        function escrever() {
+            const tela = document.getElementById("tela");
+        }
+     </script>
+</body>
+</html>
