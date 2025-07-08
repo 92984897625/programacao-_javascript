@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="botaoGerar">Gerar Lista</button>
+    <script>
+        // Lista com 10 nomes
+        const nomes = [
+          "Ana", "Bruno", "Carlos", "Daniela", "Eduardo",
+          "Fernanda", "Gabriel", "Helena", "Igor", "Julia"
+        ];
+        
+        
+        // Quando clicar no botão, chama a função
+        document.getElementById("botaoGerar").addEventListener("click", gerarLista);
+        
+        
+        // Função que cria as caixinhas para cada nome
+        function gerarLista() {
+          for (let i = 0; i < nomes.length; i++) {
+            const divNome = document.createElement("div"); // cria a div
+            divNome.innerText = nomes[i];                  // coloca o nome dentro
+        
+        
+            // Estilo direto no JavaScript
+            divNome.style.color = "red";                   // texto vermelho
+            divNome.style.border = "1px solid black";      // borda da caixinha
+            divNome.style.padding = "10px";                // espaço interno
+            divNome.style.margin = "5px 0";                // espaço entre caixinhas
+            divNome.style.width = "200px";                 // largura da caixinha
+            divNome.style.borderRadius = "5px";            // borda arredondada
+            divNome.style.boxShadow = "2px 2px 5px #888";  // sombrazinha
+            divNome.style.backgroundColor = "#fff5f5";     // fundo levemente rosado
+            divNome.style.fontFamily = "Arial";            // fonte padrão
+        
+        
+            // Coloca a caixinha no corpo da página
+            document.body.appendChild(divNome);
+          }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    .pagina{
+    height:100vh;
+    width:100vw;
+    background-color: blue;
+    }
+    
+    .cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 100%;
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqRWGSaOSW3qZY6CPOhAj8lbdlsqk6BfrcUWIKEXSRomHFCvZVIMZ11Zd0ITCBJ0VwXtAH7Xoci5jt5Sg86xRq-TiyGH671tvqDlnAS7uk6vJVug3-hHWU_oc46Na4lvJMI9TaCmpBO_Q/s1600/p1.gif");
+    background-size: cover;
+    background-position: 10%;
+    background-size: 10%;
+    color: orangered;
+    font-size: 25px;
+    }
+    
+    .cabecalho:hover{
+    color:red;
+    font-size: 35px;
+    }
+    
+    .corpo{
+    display:flex;
+    height: 75%;
+    width: 100%;
+    background-color: rgb(11, 12, 11);
+    }
+    
+    .barra_lateral{
+    height: 100%;
+    width: 200px;
+    }
+    
+    .janela{
+    display:flex;
+    height: 80%;
+    width: 82%;
+    background-color: rgb(15, 1, 1);
+    }
+    
+    .card{
+    margin:50px;
+    height: 250px;
+    width: 250px;
+    background-color: black;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/050/173/352/small/a-scary-skeleton-in-a-hooded-robe-png.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 10%;
+    border: 3px solid red;
+    }
+    
+    .card:hover{
+    border: 10px solid darkred;
+    background-size: 150%;
+    }
+    
+    .rodape{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    height: 100px;
+    width: 100%;
+    background-image: url("https://cdn.pixabay.com/photo/2020/05/22/14/39/hand-5205620_1280.png");
+    background-size: 40%;
+    background-color: rgb(44, 44, 44);
+    color:white;
+    }
+    
+    button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+    height: 90px;
+    width: 200px;
+    background-image: url("pergaminho.png");
+    background-size: cover;
+    background-position: 10% 60%;
+    background-size: 100% 150%;
+    color: orangered;
+    background-color: darkred;
+    background-repeat: no-repeat;
+    font-size: 25px;
+    }
+    
+    button:hover{
+    color:darkred;
+    font-size: 35px;
+    cursor: pointer;
+    }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+  body {
+      margin: 0;
+      height: 105vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      position: relative;
+      text-align: center;
+    }
+  .tela1{
+    background-color: red;
+    height: 1000px;
+    width: 800px;
+  }
+  .tela2{
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    display: none;
+  }
+  .tela3{
+    background-color: green;
+    height: 100px;
+    width: 100px;
+    display: none;
+    }
+    </style>
+    
+</head>
+<body>
+  <div class="tela1">
+    <h1>yytyyryryryryt</h1>
+    <button id="azul">Azul</button>
+    <button id="verde">Verde</button>
+    </div>
+  <div class="tela2">
+    <button id="vermelho1">vermelho</button>
+  </div>
+  <div class="tela3">
+    <button id="vermelho2">vermelho</button>
+  </div>
+      
+<script>
+    const tela1 = document.querySelector('.tela1');
+    const tela2 = document.querySelector('.tela2');
+    const tela3 = document.querySelector('.tela3');
+        
+        
+        
+        
+    document.getElementById('azul').onclick = function () {
+        tela1.style.display = 'none';
+        tela2.style.display = 'inline-block';
+        tela3.style.display = 'none';
+    };
+        
+        
+        
+        
+    document.getElementById('verde').onclick = function () {
+        tela1.style.display = 'none';
+        tela2.style.display = 'none';
+        tela3.style.display = 'inline-block';
+    };
+        
+        
+        
+        
+    document.getElementById('vermelho1').onclick = function () {
+        tela1.style.display = 'inline-block';
+        tela2.style.display = 'none';
+        tela3.style.display = 'none';
+    };
+        
+        
+        
+        
+    document.getElementById('vermelho2').onclick = function () {
+        tela1.style.display = 'inline-block';
+        tela2.style.display = 'none';
+        tela3.style.display = 'none';
+    };
+    </script>
+</body>
+</html>
