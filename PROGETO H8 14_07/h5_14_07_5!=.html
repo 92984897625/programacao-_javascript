@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var resultado = 1 
+        var valor = Number(prompt("Informe um valor"))
+        var t = `${valor}! = e`
+        for (let n = 1; n <= valor; n++){
+            t += n ==valor?`${n} = `:`${n} x `
+            resultado *=n
+        }
+        t += `${resultado}`
+        alert(t)
+    </script>
+</body>
+</html>

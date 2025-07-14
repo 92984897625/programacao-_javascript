@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var menor = 0,maior = 0, t = "" , valor = 0
+        for (let n = 1; n <= 5; n++){
+            valor = Number(prompt(`Informe a altura da ${n}ª pessoa`))
+            menor = menor <= 0?valor:menor
+            menor = valor < menor?valor:menor
+            maior = valor > maior?valor:maior
+            alert(valor)
+        }
+        alert(`a menor altura é ${menor} e a maior é ${maior}`)
+        // alert(t)
+    </script>
+</body>
+</html>

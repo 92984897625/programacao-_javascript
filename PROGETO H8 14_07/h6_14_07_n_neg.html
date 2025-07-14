@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ndv = Number(prompt("coloque o limite de quantidade de valres"))
+        ndv != Number? ndv = ndv : ndv = 5
+        var t = "",t2 = "", valor, n2 = 0
+        for( let n = 1; n <= ndv; n++ ) {
+            valor = Number(prompt(`${n}º numero`))
+            t2 += `${valor};`
+            if ( valor < 0 ){
+                t += `${valor};`
+                n2++
+            }
+        }
+        alert (`valores\n${t2}\ntem ${n2} numeros negativos\n${t2}`)
+    </script>
+</body>
+</html>

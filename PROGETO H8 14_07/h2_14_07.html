@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var resultado = 1, t = "", t2 = "" , valor = 0
+        var nTab = NaN
+        nTab = Number(prompt("casa da tabela de 64 casas"))
+        for (let n = 1; n <= nTab; n++){
+            valor += resultado
+            // t2 += `${valor}; `
+            // t += `${resultado}, `
+            t = resultado
+            t2 = valor
+            resultado *= 2
+        }
+        alert(`final da tabela\n${t}\nsoma\n${t2}`)
+    </script>
+</body>
+</html>

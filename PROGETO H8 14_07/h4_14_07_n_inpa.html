@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ndc = Number(prompt("coloque aonde vai comesar os numeros"))
+        var ndv = Number(prompt("coloque os ate aonde vai os numeros"))
+        ndv != Number? ndv = ndv : ndv = 10
+        ndc != Number? ndc = ndc: ndc = 1
+        var t = ""
+        for( let n = ndc; n <= ndv; n++ ) {
+            if (n % 2 != 0){
+                t += `${n};`
+            }
+        }
+        alert (t)
+    </script>
+</body>
+</html>
