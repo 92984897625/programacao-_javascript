@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+  body {
+      margin: 0;
+      height: 105vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000000;
+      position: relative;
+      text-align: center;
+    }
+      .esquerda {
+        /* background-color: aqua; */
+        height: 765px;
+        width: 600px;
+      }
+      .direita {
+        /* background-color: aqua; */
+        height: 765px;
+        width: 600px;
+        left: 100;
+      }
+  .tela1{
+    background-image: url('https://iili.io/FEJfj0x.png');
+    /* background-image: url('https://iili.io/FEJWfu2.gif:');  */
+    /* tras */
+    /* background-image: url('https://iili.io/FEJlSIe.gif'); */
+    /* frente */
+      height: 800px;
+      width: 1400px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+  .tela2{
+    background-image: url('https://iili.io/FEJfj0x.png');
+    height: 800px;
+    width: 1400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+  }
+  .tela3{
+    background-color: green;
+    height: 800px;
+    width: 1400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+    }
+    </style>
+    
+</head>
+<body>
+  <div class="tela1">
+    <div class="esquerda">
+     <h1>os dois lados</h1>
+     <button id="anterior">anterior</button>
+     <button id="verde">proximo</button></div>
+    </div>
+    <div class="direita">
+     <h1>os dois lados</h1>
+     <button id="anterior">anterior</button>
+     <button id="verde">proximo</button></div>
+    </div>
+  <div class="tela2">
+    <button id="vermelho1">vermelho</button>
+  </div>
+  <div class="tela3">
+    <button id="vermelho2">vermelho</button>
+  </div>
+      
+<script>
+    const tela1 = document.querySelector('.tela1');
+    const tela2 = document.querySelector('.tela2');
+    const tela3 = document.querySelector('.tela3');
+        
+        
+        
+        
+    document.getElementById('anterior').onclick = function () {
+      tela1.style.backgroundImage = "url('https://iili.io/FEJlSIe.gif')";
+      tela1.style.backgroundSize = "cover";
+      tela1.style.backgroundPosition = "center";
+      tela1.style.backgroundRepeat = "no-repeat";
+      setTimeout(function () {
+        tela1.style.display = 'none';
+        tela2.style.display = 'inline-block';
+        tela3.style.display = 'none';
+      }, 600);
+    };
+
+        
+        
+    document.getElementById('verde').onclick = function () {
+      tela1.style.backgroundImage = "url('https://iili.io/FEJWfu2.gif')";
+      tela1.style.backgroundSize = "cover";
+      tela1.style.backgroundPosition = "center";
+      tela1.style.backgroundRepeat = "no-repeat";
+      setTimeout(function () {
+        tela1.style.display = 'none';
+        tela2.style.display = 'inline-block';
+        tela3.style.display = 'none';
+      }, 600);
+    };
+        
+        
+        
+        
+    document.getElementById('vermelho1').onclick = function () {
+      tela1.style.backgroundImage = `url('https://iili.io/FEJfj0x.png')`;
+      tela1.style.display = 'inline-block';
+      tela2.style.display = 'none';
+      tela3.style.display = 'none';
+    };
+
+    document.getElementById('vermelho2').onclick = function () {
+      tela1.style.backgroundImage = `url('https://iili.io/FEJfj0x.png)`;
+      tela1.style.display = 'inline-block';
+      tela2.style.display = 'none';
+      tela3.style.display = 'none';
+    };
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Busca de Pokémon</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #ef5350;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 200px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      background-color: #ef5350;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+
+    button:hover {
+      background-color: #d32f2f;
+    }
+
+
+    .pokemon-info {
+      margin-top: 30px;
+    }
+
+
+    .pokemon-info img {
+      width: 150px;
+      height: 150px;
+    }
+
+
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+
+  <h1>Buscar Pokémon</h1>
+  <input type="text" id="pokemonInput" placeholder="Digite o nome (ex: pikachu)" />
+  <button onclick="buscarPokemon()">Buscar</button>
+
+
+  <div class="pokemon-info" id="pokemonInfo"></div>
+
+
+  <script>
+    function buscarPokemon() {
+      const nome = document.getElementById("pokemonInput").value.toLowerCase().trim();
+      const url = `https://pokeapi.co/api/v2/pokemon/${nome}`;
+      const infoDiv = document.getElementById("pokemonInfo");
+
+
+      infoDiv.innerHTML = "Carregando...";
+
+
+      fetch(url)
+        .then(resposta => {
+          if (!resposta.ok) {
+            throw new Error("Pokémon não encontrado");
+          }
+          return resposta.json();
+        })
+        .then(data => {
+          const nomeFormatado = data.name.charAt(0).toUpperCase() + data.name.slice(1);
+          const imagem = data.sprites.front_default;
+
+
+          infoDiv.innerHTML = `
+            <h2>${nomeFormatado}</h2>
+            <img src="${imagem}" alt="${nomeFormatado}" />
+          `;
+        })
+        .catch(error => {
+          infoDiv.innerHTML = `<p class="error">Erro: ${error.message}</p>`;
+        });
+    }
+  </script>
+
+
+</body>
+</html>
