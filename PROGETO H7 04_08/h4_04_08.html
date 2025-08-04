@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("Chico tem 1,50m e cresce 2 centímetros por ano, enquanto Juca tem 1,10m ecresce 3 centímetros por ano. Construir um algoritmo que calcule e imprima quantos anos serão necessários para que Juca seja maior que Chico.")
+        var c = 150
+        var j = 110
+        var anos = 0
+        while ( c > j ) {
+            anos += 1
+            c += 2
+            j += 3
+        }
+        c /= 100
+        j /= 100
+        alert(`Resposta: Juca presisa de ${anos} anos pra ser amior que Chico com ${c}m e Juca com ${j}m`)
+        // c.toFixed(2)
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var in1 = ""
+        var in2 = ""
+        var in3 = ""
+        var in4 = ""
+        var n = Number(prompt("Informe a quamtidade de nomeros: "))
+        var t = ""
+        var t2 = 0
+        var valor
+        while ( n > 0 ) {
+            // while ( !(valor > 0 && valor <= 100) ) {
+            // }
+            valor = Number(prompt("Informe um valor de 0 a 100: "))
+            t1 = ""
+            if ( valor >= [0.25] && valor < [26.50] ) {
+                t1 = `${valor} está no 1º intervalo `
+                in1++
+            } else if ( valor >= [26.50] && valor < [51.75] ) {
+                t1 = `${valor} está no 2º intervalo `
+                in2++
+            } else if ( valor >= [51.75] && valor < [76.1] ) {
+                t1 = `${valor} está no 3º intervalo `
+                in3++
+            } else if ( valor >= [76.1] ) {
+                t1 = `${valor} está no 4º intervalo `
+                in4++
+            }
+            t += `${t1}\n`
+            n = n - 1
+        }
+        in1 == ""? in1 = 0: in1 = in1
+        in2 == ""? in2 = 0: in2 = in2
+        in3 == ""? in3 = 0: in3 = in3
+        in4 == ""? in4 = 0: in4 = in4
+        t += `tem ${in1} no 1º intervalo, ${in2} no 2º, ${in3} no 3º e ${in4} no 4º`
+        alert(`${t}`)
+    </script>
+</body>
+</html>S

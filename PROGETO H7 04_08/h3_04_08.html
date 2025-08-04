@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = 0
+        var valor = 0
+        var r = 0
+        while ( n < 10 ) {
+            valor = Number(prompt("Informe um numero"))
+            if ( valor < 0 ) {
+                r += valor
+            }
+            n++
+        }
+        alert(`o resultado da soma dos numeros negativos é ${r}`)
+    </script>
+</body>
+</html>

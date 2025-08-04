@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = Number(prompt("Informe um numero pra repitir: "))
+        while ( n > 0 ) {
+            var resultado = 1 
+            var valor = Number(prompt("Informe um valor: "))
+            var t = `${valor}! = `
+            var v = 0
+            while(valor > v) {
+                v++
+                t += v == valor?`${v} = `:`${v} x `
+                resultado *=v
+            }
+            t += `${resultado}`
+            alert(t)
+            n--
+        }
+    </script>
+</body>
+</html>
